@@ -17,6 +17,17 @@
         [ngStyle]="{'backgroundColor': logItem >= 5 ? 'blue' : 'transparent'}"
         [ngClass]="{'white-text': logItem >= 5}"
       > {{ logItem }}</div>
+      <br><br><br>
+      <hr>
+      <!-- lecture 44 -->
+      <button class="btn btn-primary" (click)= "onToggleDetails()"  > Display Details</button>
+      <br><br>
+      <p *ngIf = "showSecret">Secret Password = 2j</p>
+      <div 
+        *ngFor="let newLogItem of newLog; let i = index"
+        [ngStyle]="{'backgroundColor': i >= 4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 4}"
+      > {{ newLogItem }}</div>
     </div>
   </div>
 </div>

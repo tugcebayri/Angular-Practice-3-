@@ -8,9 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showPassword = false;
   log = [];
+  showSecret = false;
+  newLog = [];
 
   isShow() {
     this.showPassword = !this.showPassword;
     this.log.push(this.log.length +1);
+  }
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.newLog.push(new Date());
   }
 }
